@@ -87,12 +87,17 @@
             text-align: center;
             color: whitesmoke;
         }
+            #vid:hover {
+                background-image: url('./resources/pic22.jpg');
+                background-size:cover; /* Adjusted to cover the full width */
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 130vh;
+                width: 100vw;
+                opacity: 1;
+            }
 
-        #vid:hover {
-            background-image: url('./resources/pic31.jpg');
-            background-size: cover;
-            opacity: 1;
-        }
+
 
         .show-videos-btn {
             background-color: #007bff;
@@ -139,13 +144,15 @@
                 margin-top: 40px;
             }
 
+            #text_m
+            {
+                font-size: 3rem;
+            }
         @media (max-width: 500px) {
             .background-section {
-                background-size: cover; /* Adjust as needed */
-                background-position: center;
-                background-repeat: no-repeat;
+                
                 width: 100vw;
-                height: 100vh;
+                height: 60vh;
             }
             
         }
@@ -179,6 +186,54 @@
             }
         }
 
+        @media (max-width: 500px) {
+        #about .col-md-5 {
+            margin: auto;
+            width: 40%; 
+            height: auto;
+        }
+}
+        @media (max-width: 500px) {
+            .row.g-0 [class*="col-"] img {
+                width: auto;
+                height: 50%;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 500px) {
+        #vid:hover {
+            background-image: url('./resources/pic25.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 50vh; /* Adjust the height for smaller screens */
+            width:100vw;
+            opacity: 1;
+        }
+        #vid {
+            height: 50vh; /* Adjust the height for smaller screens */
+            width:100vw;
+        }
+
+                /* Extra small screens */
+        @media (max-width: 576px) {
+            .footer {
+                font-size: 0.8rem; /* Adjust as needed */
+            }
+
+            #text_m {
+                font-size: 1.5rem; /* Adjust as needed */
+            }
+
+            .show-videos-btn {
+                font-size: 0.7rem; /* Adjust as needed */
+                padding: 8px 12px; /* Adjust padding */
+                width: 35vw;
+            }
+        }
+
+        }
 
     </style>
 </head>
@@ -234,7 +289,7 @@
 
 <div class="row " id="about" style="background-color: rgba(186, 175, 175, 0.3);">
     <div class="col-md-5 col-lg-4 col-sm-4 col-5  g-0">
-        <img src="./resources/HisPic.jpg" alt=""  style="width: 100%; height: 70vh;">
+        <img src="./resources/HisPic.jpg" alt=""  style="width: 100%; height: 100%;">
     </div>
     
     <div class="col-md-7 col-lg-7 col-sm-8 col-7 mt-3 " id="mytext">
@@ -260,7 +315,7 @@
 
             <h2 class="mt-3 mb-3 text-center">Picture Section</h2>
                 <!-- Grid section -->
-            <div class="row row g-0" style="height: 80vh; margin: 0;">
+            <div class="row  g-0" >
                 <div class="col-lg-4 col-sm-4 col-4">
                     <img src="./resources/pic13.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
                     <div class="like-icon" onclick="likeImage(this)">
@@ -281,7 +336,7 @@
                 </div>       
             </div>
 
-            <div class="row row g-0" style="height: 65vh; margin: 0;">
+            <div class="row  g-0" >
                 <div class="col-lg-3 col-sm-3 col-3">
                     <img src="./resources/pic7.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
                 </div>        
@@ -296,19 +351,16 @@
                 </div>       
             </div>
 
-            <div class="row row g-0" style="height: 50vh; margin: 0;">
-                <div class="col-lg-2 col-sm-3 col-3">
+            <div class="row  g-0" >
+                <div class="col-lg-4 col-sm-4 col-4">
                     <img src="./resources/pic1.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
                 </div>        
-                <div class="col-lg-2 col-sm-3 col-3">
-                    <img src="./resources/pic14.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
-                </div>
-                <div class="col-lg-2 col-sm-3 col-3">
-                    <img src="./resources/pic9.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
-                </div>
-                <div class="col-lg-6 col-sm-3 col-3">
+                <div class="col-lg-4 col-sm-4 col-4">
                     <img src="./resources/pic2.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
-                </div>      
+                </div>
+                <div class="col-lg-4 col-sm-4 col-4">
+                    <img src="./resources/pic9.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
+                </div>    
             </div>
 
 
@@ -343,7 +395,7 @@
             </div>
 
 
-            <div class="row row g-0">
+            <div class="row  g-0">
                 <div class="col-lg-4 col-sm-4 col-4">
                     <img src="./resources/pic18.jpg" alt="Image 1" class="w-100 h-100" style="object-fit: cover;">
                 </div>
@@ -378,7 +430,7 @@
             <div id="vid" class="mt-3">
                 <div class="row " >
                     <div class="container mt-5"style="font-family: './resources/Prata/Prata-Regular';">
-                <h2 class="text-center mb-3 " style="font-size: 3rem;" >Video Section</h2>
+                <h2 class="text-center mb-3 " id="text_m" >Video Section</h2>
                 <button class="show-videos-btn d-flex align-items-center" style="margin-left: 6vw;" onclick="toggleVideos()">
                     <span class="visually-hidden">Show Videos</span>
                     <i class="bi bi-vinyl-fill">
@@ -430,7 +482,7 @@
                 
 <footer class="footer" >
     <div class="container">
-        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        <p>&copy; 2024 Byte Innovations. All rights reserved.</p>
         <a href="#" class="back-to-top" title="Back to Top">&#8679;</a>
     </div>
 </footer>
